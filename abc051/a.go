@@ -8,5 +8,5 @@ import (
 func main() {
 	var s string
 	fmt.Scan(&s)
-	fmt.Println(strings.Replace(s, ",", " ", 3))
+	fmt.Println(strings.Replace(s, ",", " ", -1))
 }
