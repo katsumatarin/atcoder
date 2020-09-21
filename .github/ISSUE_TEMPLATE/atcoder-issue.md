@@ -9,7 +9,6 @@ assignees: katsumatarin
 
 # 問題URL
 <!-- ここにAtcoderの問題URLを貼り付ける -->
-https://atcoder.jp/contests/abc042/tasks/abc042_b
 
 # TODO (上から下に順番に処理する)
 - [x] issue作成
