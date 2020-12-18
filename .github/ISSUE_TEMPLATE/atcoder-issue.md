@@ -11,13 +11,13 @@ assignees: katsumatarin
 <!-- ここにAtcoderの問題URLを貼り付ける -->
 
 # TODO (上から下に順番に処理する)
-- [x] issue作成
-- [x] katsumatarinをassignし、進捗管理ボードにのせる
-- [ ] VS Codeで作業する
-  - [ ] 問題を解くファイル(なければディレクトリも)を作成する。abc045のA問題の場合、`atcoder/abc045/a.go`
-  - [ ] 問題を解いて Atcoder に提出する。
-  - [ ] VS Codeを使ってコミットする。
-  - [ ] `git push`のコマンドでpushする(違うコマンドを使えと怒られたらそのコマンドを打つ)
+- [x] issue作成, 自分のassign, 進捗管理ボードにのせる
+- [ ] 問題を解くファイル(なければディレクトリも)を作成する。abc045のA問題の場合、`atcoder/abc045/a.cpp`
+- [ ] `oj d {url}`で問題をダウンロード
+- [ ] 問題を解き、コンパイルして`oj t`でテスト
+- [ ] `oj s {url} {提出する.cppのファイル名}`でAtcoderに提出する。
+- [ ] commit, pushする(違うコマンドを使えと怒られたらそのコマンドを打つ)
+- [ ] 次に解く問題を[AtCoder Scores](https://atcoder-scores.herokuapp.com/?user=potekuma)から決めてissueを作成する
 
 # その他
 ## ローカルのブランチ一覧と自分が今いるブランチの確認コマンド
@@ -34,3 +34,12 @@ assignees: katsumatarin
 
 ## コミット履歴を確認するコマンド
 `git log`
+
+## C++のコンパイル
+ctrl + option + n (`g++ hoge.c` を裏で実行している)
+
+## online judge tools
+テストケースダウンロード`oj d {url}`
+テスト実行`oj t`
+提出`oj s {url} b.cpp`
+[online-judge-toolsのリポジトリ](https://github.com/online-judge-tools/oj/blob/master/docs/getting-started.ja.md)を参考にすること
