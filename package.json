@@ -1,0 +1,21 @@
+{
+  "name": "atcoder",
+  "version": "1.0.0",
+  "description": "AtCoder用",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katsumatarin/atcoder.git"
+  },
+  "author": "katsumatarin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katsumatarin/atcoder/issues"
+  },
+  "homepage": "https://github.com/katsumatarin/atcoder#readme",
+  "dependencies": {
+    "atcoder-cli": "^2.1.0"
+  }
+}
