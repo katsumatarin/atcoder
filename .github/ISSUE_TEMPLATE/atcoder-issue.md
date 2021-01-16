@@ -12,10 +12,9 @@ assignees: katsumatarin
 
 # TODO (上から下に順番に処理する)
 - [x] issue作成, 自分のassign, 進捗管理ボードにのせる
-- [ ] 問題を解くファイル(なければディレクトリも)を作成する。abc045のA問題の場合、`atcoder/abc045/a.cpp`
-- [ ] `oj d {url}`で問題をダウンロード
-- [ ] 問題を解き、コンパイルして`oj t`でテスト
-- [ ] `oj s {url} {提出する.cppのファイル名}`でAtcoderに提出する。
+- [ ] 解きたい問題のディレクトリが作成されていない場合、問題を解くディレクトリを作成する。abc045の問題の場合、`acc new abc045`、解きたい問題をtoggleして問題情報をダウンロード。ファイルのみ存在しない場合はコンテストディレクトリで`acc add`
+- [ ] 問題を解き、コンパイルして`oj t -d tests`でテスト
+- [ ] `acc submit {提出する.cppのファイル名}`でAtcoderに提出する。
 - [ ] commit, pushする(違うコマンドを使えと怒られたらそのコマンドを打つ)
 - [ ] 次に解く問題を[AtCoder Scores](https://atcoder-scores.herokuapp.com/?user=potekuma)から決めてissueを作成する
 
@@ -37,9 +36,3 @@ assignees: katsumatarin
 
 ## C++のコンパイル
 ctrl + option + n (`g++ hoge.c` を裏で実行している)
-
-## online judge tools
-テストケースダウンロード`oj d {url}`
-テスト実行`oj t`
-提出`oj s {url} b.cpp`
-[online-judge-toolsのリポジトリ](https://github.com/online-judge-tools/oj/blob/master/docs/getting-started.ja.md)を参考にすること
