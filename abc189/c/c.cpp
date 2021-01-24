@@ -1,19 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main() {
   int N;
   cin >> N;
   vector<int> vec(N);
-  for (int i = 0; i < N; i++)
-  {
-    cin >> vec.at(i);
+  for (int i = 0; i < N; i++) cin >> vec.at(i);
+  int ans = 0;
+  for (int l = 0; l < N; l++) {
+    int x = vec[l];
+    for (int r = l; r < N; r++) {
+      x = min(x, vec[r]);
+      ans = max(ans, x*(r-l+1));
+    }
   }
-  for (int i = 0; i < N; i++) {
-    vector<int> vecCopy;
-    cin >> vecCopy.at(vec[i]);
-    int min = *min_element(vecCopy.begin(), vecCopy.end());
-    cout << vecCopy[i] << endl;
-  }
+  cout << ans;
 }
