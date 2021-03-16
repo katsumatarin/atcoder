@@ -2,16 +2,15 @@
 using namespace std;
 
 int main(){
-  int K, S;
+  int64_t K, S;
   cin >> K >> S;
 
-  int cnt = 0;
-  for(int i = 0; i <= K; i++) {
-    for(int j = 0; j <= K; j++) {
-      for(int k = 0; k <= K; k++) {
-        if(i + j + k == S) {
-          cnt++;
-        }
+  int64_t cnt = 0;
+  for(int64_t i = 0; i <= K; i++) {
+    for(int64_t j = 0; j <= K; j++) {
+      int k = S - i - j;
+      if(0 <= k && k <= K) {
+        cnt++;
       }
     }
   }
