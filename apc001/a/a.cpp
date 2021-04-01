@@ -9,14 +9,7 @@ int main() {
   if (X % Y == 0) {
     cout << ans << endl;
     return 0;
-  }
-  while(true){
-    int64_t i = 2;
-    cnt = X * i;
-    if (cnt % Y != 0) {
-      cout << cnt << endl;
-      return 0;
-    }
-    i++;
+  } else {
+    cout << X << endl;
   }
 }
