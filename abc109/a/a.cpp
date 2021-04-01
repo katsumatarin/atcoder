@@ -2,14 +2,12 @@
 using namespace std;
 
 int main(){
-  int A, B, C;
+  int A, B;
   cin >> A >> B;
-  for(int i = 1; i <= 3; i++){
-    if((A * B * C) % 2 != 0) {
-      cout << "Yes" << endl;
-      return 0;
-    }
+  if(A * B % 2 != 0) {
+    cout << "Yes" << endl;
+  } else {
+    cout << "No" << endl;
   }
-  cout << "No" << endl;
   return 0;
 }
