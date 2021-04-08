@@ -2,11 +2,13 @@
 using namespace std;
 
 int main() {
-  int N, x;
+  int64_t N, x;
   cin >> N >> x;
-  vector<int> vec;
-  int a = 0, sum = 0, ans = 0;
-  for(int i = 0; i < N; i++){
+
+  vector<int64_t> vec;
+  int64_t a = 0, sum = 0, ans = 0;
+
+  for(int64_t i = 0; i < N; i++){
     cin >> a;
     sum += a;
     vec.push_back(a);
@@ -14,12 +16,22 @@ int main() {
 
   sort(vec.begin(), vec.end());
 
-  if (vec[0] > x) {
-    cout << ans << endl;
+  if(sum == x) {
+    ans = N;
   }
 
-  if (sum <= x) {
-    ans = N;
-    cout << ans << endl;
+  if (sum < x) {
+    ans = N - 1;
   }
+
+  int64_t k = 0;
+  if (sum > x) {
+    while(x >= vec[k]){
+      x -= vec[k];
+      k++;
+    }
+    ans = k;
+  }
+
+  cout << ans << endl;
 }
