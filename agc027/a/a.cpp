@@ -2,13 +2,13 @@
 using namespace std;
 
 int main() {
-  int N, x;
+  int64_t N, x;
   cin >> N >> x;
 
-  vector<int> vec;
-  int a = 0, sum = 0, ans = 0;
+  vector<int64_t> vec;
+  int64_t a = 0, sum = 0, ans = 0;
 
-  for(int i = 0; i < N; i++){
+  for(int64_t i = 0; i < N; i++){
     cin >> a;
     sum += a;
     vec.push_back(a);
@@ -24,7 +24,7 @@ int main() {
     ans = N - 1;
   }
 
-  int k = 0;
+  int64_t k = 0;
   if (sum > x) {
     while(x >= vec[k]){
       x -= vec[k];
