@@ -1,12 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+string half[2];
+
 int main(){
   int64_t n;
   string s;
   cin >> n >> s;
-  string first = s.substr(0, n);
-  string second = s.substr(n);
+
+  int fr = 0;
+  int sc = 1;
+
+  half[fr] = s.substr(0, n);
+  half[sc] = s.substr(n);
 
   int64_t q;
   cin >> q;
@@ -14,35 +20,37 @@ int main(){
   int64_t t, a, b;
   for(int64_t i = 0; i < q; i++){
     cin >> t >> a >> b;
+    a--;
+    b--;
 
     if(t == 1){
       char ca, cb;
-      if(a <= n){
-        ca = first[a-1];
+      if(a < n){
+        ca = half[fr][a];
       } else {
-        ca = second[a-n-1];
+        ca = half[sc][a-n];
       }
-      if(b <= n){
-        cb = first[b-1];
+      if(b < n){
+        cb = half[fr][b];
       } else {
-        cb = second[b-n-1];
+        cb = half[sc][b-n];
       }
 
-      if(a <= n){
-        first[a-1] = cb;
+      if(a < n){
+        half[fr][a] = cb;
       } else {
-        second[a-n-1] = cb;
+        half[sc][a-n] = cb;
       }
-      if(b <= n){
-        first[b-1] = ca;
+      if(b < n){
+        half[fr][b] = ca;
       } else {
-        second[b-n-1] = ca;
+        half[sc][b-n] = ca;
       }
     } else if(t == 2) {
-      string escape = first;
-      first = second;
-      second = escape;
+      int escape = fr;
+      fr = sc;
+      sc = escape;
     }
   }
-  cout << first + second << endl;
+  cout << half[fr] + half[sc] << endl;
 }
