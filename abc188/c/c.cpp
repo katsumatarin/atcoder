@@ -6,22 +6,14 @@ int main(){
   int n;
   cin >> n;
 
-  int a;
-  vector<int> vec;
-  pair<int, int> fr_max = make_pair(0, 0);
-  pair<int, int> sc_max = make_pair(0, 0);
+  pair<int, int> fr_max, sc_max;
   for(int i = 0; i < pow(2, n); i++){
+    int a;
     cin >> a;
     if(i < pow(2, n) / 2){
-      if(a > fr_max.first){
-        fr_max.first = a;
-        fr_max.second = i;
-      }
+      if(a > fr_max.first) fr_max.first = a, fr_max.second = i;
     } else {
-      if(a > sc_max.first){
-        sc_max.first = a;
-        sc_max.second = i;
-      }
+      if(a > sc_max.first) sc_max.first = a, sc_max.second = i;
     }
   }
 
