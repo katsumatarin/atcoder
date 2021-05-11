@@ -6,12 +6,12 @@ int main(){
   int n;
   string s;
   cin >> n >> s;
-  int r, b;
+  int r = 0;
   for(int i = 0; i < n; i++){
     if(s[i] == 'R') r++;
-    else b++;
+    else r--;
   }
-  if(r > b) cout << "Yes" << endl;
+  if(r > 0) cout << "Yes" << endl;
   else cout << "No" << endl;
   return 0;
 }
