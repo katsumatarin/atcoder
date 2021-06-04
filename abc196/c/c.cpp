@@ -34,7 +34,6 @@ int main(){
   int64_t ans = 0, out = 1e6;
   while(out - ans > 1){
     int64_t mid = (ans + out) / 2;
-    cout << stoll(to_string(mid) + to_string(mid)) << endl;
     if(stoll(to_string(mid) + to_string(mid)) <= N) {
       ans = mid;
     } else {
