@@ -5,34 +5,24 @@ using ll = long long;
 int main(){
     ll n;
     cin >> n;
-    vector<ll> a(n), b(n), c(n);
-    for(ll i = 0; i < n; i++) cin >> a[i];
-    for(ll i = 0; i < n; i++) cin >> b[i];
-    for(ll i = 0; i < n; i++) cin >> c[i];
+    vector<ll> a_vec(n), b_vec(n), c_vec(n);
 
-    sort(a.begin(), a.end());
-    sort(b.begin(), b.end());
-    sort(c.begin(), c.end());
+    for(ll i = 0; i < n; i++) cin >> a_vec[i];
+    for(ll i = 0; i < n; i++) cin >> b_vec[i];
+    for(ll i = 0; i < n; i++) cin >> c_vec[i];
 
-    ll now_b, num_a, num_c, res = 0;
-    ll idx_bound_a, idx_bound_c;
+    sort(a_vec.begin(), a_vec.end());
+    sort(b_vec.begin(), b_vec.end());
+    sort(c_vec.begin(), c_vec.end());
+
+    ll ans = 0;
     for(ll i = 0; i < n; i++) {
-        now_b = b[i];
-        num_a = 0;
-        num_c = 0;
-
-        auto iter_a = lower_bound(a.begin(), a.end(), now_b);
-        idx_bound_a = distance(a.begin(), iter_a);
-        num_a = (iter_a == a.end())? n: (idx_bound_a+1)-1;
-
-        auto iter_c = upper_bound(c.begin(), c.end(), now_b);
-        idx_bound_c = distance(c.begin(), iter_c);
-        num_c = (iter_c == c.end())? 0: n-idx_bound_c;
-
-        res += num_a * num_c;
+        ll num1 = lower_bound(a_vec.begin(), a_vec.end(), b_vec[i]) - a_vec.begin();
+        ll num2 = c_vec.end() - upper_bound(c_vec.begin(), c_vec.end(), b_vec[i]);
+        if(num1!=0 && num2!=0) ans += num1 * num2;
     }
 
-    cout << res << endl;
+    cout << ans << endl;
 
     return 0;
 }
