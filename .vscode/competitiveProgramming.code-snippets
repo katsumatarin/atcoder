@@ -20,4 +20,40 @@
         ],
         "description": ""
     },
+    "poj": {
+        "prefix": "POJ",
+        "body": [
+            "#include <functional>",
+            "#include <iostream>",
+            "#include <algorithm>",
+            "#include <vector>",
+            "#include <set>",
+            "#include <map>",
+            "#include <queue>",
+            "#include <deque>",
+            "#include <stack>",
+            "#include <cmath>",
+            "#include <cstdio>",
+            "#include <iomanip>",
+            "#include <limits>",
+            "#include <iterator>",
+            "#include <string>",
+            "",
+            "using namespace std;",
+            "typedef long long ll;",
+            "",
+            "void solve()",
+            "{",
+            "    ",
+            "}",
+            "",
+            "int main()",
+            "{",
+            "    cout << fixed << setprecision(15);",
+            "    solve();",
+            "    return 0;",
+            "}"
+        ],
+        "description": ""
+      }
 }
